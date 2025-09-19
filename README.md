@@ -130,7 +130,7 @@ Once trained, the **Generator** can directly reconstruct audio:
 - Predicts magnitude & phase  
 - Uses inverse STFT (`TorchSTFT.polar_inverse`) for waveform synthesis  
 
-Resulting `.wav` files are saved in the `/results/` directory.  
+Resulting `.wav` files are saved in the `/[`results`](./results)/` directory.
 
 ---
 
