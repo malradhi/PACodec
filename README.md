@@ -12,11 +12,12 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 </p>
 
 <br>
+
 ## 🎧 Audio Samples
 
 <div align="center">
   <a href="https://malradhi.github.io/PACodec/">
-    <img src="https://img.shields.io/badge/Demo%20Page-blueviolet.svg" alt="Demo" width="160">
+    <img src="https://img.shields.io/badge/Demo%20Page-informational.svg" alt="Demo" width="160">
   </a>
 </div>
 
