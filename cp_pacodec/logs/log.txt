@@ -1,0 +1,5 @@
+PACodec Training Log
+
+[INFO] This is a placeholder log file.
+[INFO] All training and validation logs will be stored here.
+[INFO] Use TensorBoard to monitor metrics: tensorboard --logdir ./cp_pacodec/logs
