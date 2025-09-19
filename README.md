@@ -1,12 +1,10 @@
-<!-- # MiSTR: Multi-Modal iEEG-to-Speech Synthesis with Transformer-Based Prosody Prediction and Neural Phase Reconstruction -->
-
-
-<h1 align="center"><strong>MiSTR: Multi-Modal iEEG-to-Speech Synthesis with Transformer-Based Prosody Prediction and Neural Phase Reconstruction</strong></h1>
+<h1 align="center"><strong>Prosody-Guided Harmonic Attention for Phase-Coherent Neural Vocoding in the Complex Spectrum</strong></h1>
 
 <p align="center" style="font-size: 1 em; margin-top: 1em">
-<a href="https://malradhi.github.io/">Mohammed Salah Al-Radhi<sup>1</sup></a>,  
-<a href="https://scholar.google.ro/citations?user=Qf5PHwoAAAAJ&hl=en/">Géza Németh<sup>1</sup></a>,  
-<a href="https://gerazov.github.io/">Branislav Gerazov<sup>2</sup></a>,
+<a href="https://malradhi.github.io/">Mohammed Salah Al-Radhi</a>, 
+Riad Larbi,
+<a href="https://www.semanticscholar.org/author/M%C3%A1ty%C3%A1s-Bartalis/3194027">Mátyás Bartalis</a>,
+<a href="https://scholar.google.ro/citations?user=Qf5PHwoAAAAJ&hl=en/">Géza Németh</a>,
 </p>
 
 <p align="center">
