@@ -65,7 +65,7 @@ pip install -r requirements.txt
 python train.py --config config.json --checkpoint_path cp_pacodec
 ```
 
-Results and logs will be saved under `./results/` and `./cp_pacodec/logs/`.
+Results and logs will be saved under [`results`](./results) and `./cp_pacodec/logs/`.
 
 <br>
 <br>
