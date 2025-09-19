@@ -11,6 +11,9 @@ Riad Larbi,
 Department of Telecommunications and Artificial Intelligence, Budapest University of Technology and Economics, Budapest, Hungary  
 </p>
 
+
+## 💡 Samples
+
 <div align="center">
   <a href="https://malradhi.github.io/PACodec/">
     <img src="https://img.shields.io/badge/GitHub-Demo%20Page-orange.svg" alt="Demo" width="180">
