@@ -11,12 +11,12 @@ Riad Larbi,
 Department of Telecommunications and Artificial Intelligence, Budapest University of Technology and Economics, Budapest, Hungary  
 </p>
 
-
+<br>
 ## 🎧 Audio Samples
 
 <div align="center">
   <a href="https://malradhi.github.io/PACodec/">
-    <img src="https://img.shields.io/badge/Demo%20Page-orange.svg" alt="Demo" width="160">
+    <img src="https://img.shields.io/badge/Demo%20Page-blueviolet.svg" alt="Demo" width="160">
   </a>
 </div>
 
