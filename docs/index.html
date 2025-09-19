@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+
+
+  <head>
+    <title>MiSTR</title>
+      <article>
+        <header>
+		
+
+		
+  
+<p><br> 
+</br></p>
+	
+	<h1>MiSTR: Multi-Modal iEEG-to-Speech Synthesis with Transformer-Based Prosody Prediction and Neural Phase Reconstruction</h1>
+        </header>
+      </article>
+	  <p>  </p>
+	  
+	  <p><b>Authors:</b> <a href="https://malradhi.github.io/" target="_blank">Mohammed Salah Al-Radhi</a>, Géza Németh, Branislav Gerazov</p>
+	  <p> 
+	  </p>  
+<p> 
+</p>
+
+
+
+
+
+<p>
+<b>Abstract: </b>
+Speech synthesis from intracranial EEG (iEEG) signals offers a promising avenue for restoring communication in individuals with severe speech impairments. However, achieving intelligible and natural speech remains challenging due to limitations in feature representation, prosody modeling, and phase reconstruction. We introduce MiSTR, a deep-learning framework that integrates: 1) Wavelet-based feature extraction to capture fine-grained temporal, spectral, and neurophysiological representations of iEEG signals, 2) A Transformer-based decoder for prosody-aware spectrogram prediction, and 3) A neural phase vocoder enforcing harmonic consistency via adaptive spectral correction. Evaluated on a public iEEG dataset, MiSTR achieves state-of-the-art speech intelligibility, with a mean Pearson correlation of 0.91 between reconstructed and original Mel spectrograms, improving over existing neural speech synthesis baselines.
+</p>
+
+<!-- <p align="left"><img width="40%" src="../img/model.jpg" /></p> -->
+
+<p align="left">
+  <img width="60%" src="https://raw.githubusercontent.com/malradhi/MiSTR/main/img/model.jpg" alt="Model Architecture" />
+</p>
+
+
+
+
+<hr>
+
+
+
+<br />
+<br />
+
+
+<div>	
+      <table class="table">
+	<thead>
+	  <tr>
+	    <th>Natural</th>
+	    <th>Reference Model [1]</th>
+		<th>MiSTR</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/original/sub-01_orig_audio.wav" type="audio/wav">
+	      </audio>
+	    </td>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/baseline/sub-01_synthesized.wav" type="audio/wav">
+	      </audio>
+	    </td>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/MiSTR/sub-01_predicted.wav" type="audio/wav">
+	      </audio>
+	    </td>		
+	  </tr>
+	</tbody>
+      </table>
+	</div>
+	  
+	  
+
+
+
+
+<div>	
+      <table class="table">
+	<thead>
+	  <tr>
+	    <th>Natural</th>
+	    <th>Reference Model [1]</th>
+		<th>MiSTR</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/original/sub-02_orig_audio.wav" type="audio/wav">
+	      </audio>
+	    </td>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/baseline/sub-02_synthesized.wav" type="audio/wav">
+	      </audio>
+	    </td>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/MiSTR/sub-02_predicted.wav" type="audio/wav">
+	      </audio>
+	    </td>		
+	  </tr>
+	</tbody>
+      </table>
+	</div>
+
+
+
+
+<div>	
+      <table class="table">
+	<thead>
+	  <tr>
+	    <th>Natural</th>
+	    <th>Reference Model [1]</th>
+		<th>MiSTR</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/original/sub-03_orig_audio.wav" type="audio/wav">
+	      </audio>
+	    </td>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/baseline/sub-03_synthesized.wav" type="audio/wav">
+	      </audio>
+	    </td>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/MiSTR/sub-03_predicted.wav" type="audio/wav">
+	      </audio>
+	    </td>		
+	  </tr>
+	</tbody>
+      </table>
+	</div>
+
+  
+	
+	
+	
+	
+<div>	
+      <table class="table">
+	<thead>
+	  <tr>
+	    <th>Natural</th>
+	    <th>Reference Model [1]</th>
+		<th>MiSTR</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/original/sub-08_orig_audio.wav" type="audio/wav">
+	      </audio>
+	    </td>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/baseline/sub-08_synthesized.wav" type="audio/wav">
+	      </audio>
+	    </td>
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/MiSTR/sub-08_predicted.wav" type="audio/wav">
+	      </audio>
+	    </td>		
+	  </tr>
+	</tbody>
+      </table>
+	</div>	
+	
+	
+
+
+<br />
+<br />	  
+
+
+
+	
+<p><b>Reference Model [1]:</b> M. Verwoert, M.C. Ottenhoff, S. Goulis, et al., "Dataset of Speech Production in Intracranial Electroencephalography," <i>Scientific Data</i>, vol. 9, pp. 1–9, 2022. <a href="https://doi.org/10.1038/s41597-022-01542-9" target="_blank">[DOI]</a></p>
+	
+	
+<hr>	
+	
+	
+
+
+
+<p align="left">
+  <img width="40%" src="https://raw.githubusercontent.com/malradhi/MiSTR/main/img/compare.png" alt="Model Architecture" />
+</p>
+
+
+
+<hr>
+	
+  </head>
+</html>
