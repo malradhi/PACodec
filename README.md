@@ -8,8 +8,8 @@ Riad Larbi,
 </p>
 
 <p align="center">
-  <sup>1</sup>Department of Telecommunications and Artificial Intelligence, Budapest University of Technology and Economics, Budapest, Hungary<br>
-  <sup>2</sup>Faculty of Electrical Engineering and Information Technologies, University of Ss. Cyril and Methodius, Skopje, Macedonia<br>
+  Department of Telecommunications and Artificial Intelligence, Budapest University of Technology and Economics, Budapest, Hungary<br>
+  
 </p>
 
 <div align="center">
@@ -19,7 +19,7 @@ Riad Larbi,
 <!--   <a href="https://arxiv.org/abs/2505.19595v1">
     <img src="https://img.shields.io/badge/arXiv-2505.19595-b31b1b.svg?logo=arXiv" alt="arXiv">
   </a> -->
-  <a href="https://malradhi.github.io/MiSTR/">
+  <a href="https://malradhi.github.io/PACodec/">
     <img src="https://img.shields.io/badge/GitHub-Demo%20page-orange.svg" alt="Demo" width="180">
   </a>
 </div
