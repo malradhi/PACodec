@@ -12,7 +12,7 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 </p>
 
 
-## 💡 Samples
+## 🎧 Audio Samples
 
 <div align="center">
   <a href="https://malradhi.github.io/PACodec/">
