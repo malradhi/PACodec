@@ -55,7 +55,7 @@ foundation for expressive neural vocoding.
 <!-- <p align="left"><img width="40%" src="../img/model.jpg" /></p> -->
 
 <p align="left">
-  <img width="40%" src="https://raw.githubusercontent.com/malradhi/PACodec/main/img/model.jpg" alt="Model Architecture" />
+  <img width="20%" src="https://raw.githubusercontent.com/malradhi/PACodec/main/img/model.jpg" alt="Model Architecture" />
 </p>
 
 
@@ -74,27 +74,46 @@ foundation for expressive neural vocoding.
 	<thead>
 	  <tr>
 	    <th>Natural</th>
-	    <th>Reference Model [1]</th>
-		<th>MiSTR</th>
+	    <th>Anchor</th>
+		<th>HiFi-GAN</th>
+		<th>AutoVocoder</th>
+		<th>Vocos</th>
+		<th>Proposed</th>
 	  </tr>
 	</thead>
 	<tbody>
 	  <tr>
 	    <td>
 	      <audio controls="">
-		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/original/sub-01_orig_audio.wav" type="audio/wav">
+		<source src="https://raw.githubusercontent.com/malradhi/PACodec/main/samples/Natural/sub-01_orig_audio.wav" type="audio/wav">
 	      </audio>
 	    </td>
 	    <td>
 	      <audio controls="">
-		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/baseline/sub-01_synthesized.wav" type="audio/wav">
+		<source src="https://raw.githubusercontent.com/malradhi/PACodec/main/samples/Anchor/sub-01_synthesized.wav" type="audio/wav">
 	      </audio>
 	    </td>
 	    <td>
 	      <audio controls="">
-		<source src="https://raw.githubusercontent.com/malradhi/MiSTR/main/samples/MiSTR/sub-01_predicted.wav" type="audio/wav">
+		<source src="https://raw.githubusercontent.com/malradhi/PACodec/main/samples/HiFi-GAN/sub-01_predicted.wav" type="audio/wav">
 	      </audio>
 	    </td>		
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/PACodec/main/samples/AutoVocoder/sub-01_predicted.wav" type="audio/wav">
+	      </audio>
+	    </td>		
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/PACodec/main/samples/Vocos/sub-01_predicted.wav" type="audio/wav">
+	      </audio>
+	    </td>		
+	    <td>
+	      <audio controls="">
+		<source src="https://raw.githubusercontent.com/malradhi/PACodec/main/samples/Proposed/sub-01_predicted.wav" type="audio/wav">
+	      </audio>
+	    </td>		
+
 	  </tr>
 	</tbody>
       </table>
