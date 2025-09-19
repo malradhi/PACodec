@@ -566,16 +566,127 @@ foundation for expressive neural vocoding.
 
 
 
-	
-<hr>	
+
 	
 	
 
 
 
+<hr>
+<h2 style="text-align:center;">Analysis Figures</h2>
+
+<!-- Row 1: Fig 1 + Fig 2 -->
+<table border="0" cellpadding="8" cellspacing="0" width="100%">
+  <tr>
+    <!-- Figure 1 -->
+    <td valign="top" width="50%">
+      <figure>
+        <img
+          src="https://raw.githubusercontent.com/malradhi/PACodec/main/img/f0_error_histograms.png"
+          alt="F0 Error Distribution (Model − Original) on Voiced Frames"
+          width="100%">
+        <figcaption>
+          <strong>Figure 1.</strong>
+          <em>F0 error distribution between model outputs and the original signal on voiced frames.
+          The Proposed model achieves the tightest clustering near zero error, indicating superior
+          pitch tracking compared to HiFi-GAN, AutoVocoder, and Vocos.</em>
+        </figcaption>
+      </figure>
+    </td>
+
+    <!-- Figure 2 -->
+    <td valign="top" width="50%">
+      <figure>
+        <img
+          src="https://raw.githubusercontent.com/malradhi/PACodec/main/img/mel_f0_inset_comparison_horizontal.png"
+          alt="Mel-Spectrogram with F0 (Original vs. HiFi-GAN, AutoVocoder, Vocos, Proposed) with Insets"
+          width="100%">
+        <figcaption>
+          <strong>Figure 2.</strong>
+          <em>Mel-spectrograms with F0 overlays. HiFi-GAN produces smoother but weaker harmonics,
+          AutoVocoder retains harmonics with noticeable smearing, and Vocos yields fuzzy, unstable
+          structures. The Proposed method best preserves harmonic sharpness and F0 alignment, closely
+          resembling the original.</em>
+        </figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
+
+<!-- Row 2: Fig 3 + Fig 4 -->
+<table border="0" cellpadding="8" cellspacing="0" width="100%">
+  <tr>
+    <!-- Figure 3 -->
+    <td valign="top" width="50%">
+      <figure>
+        <img
+          src="https://raw.githubusercontent.com/malradhi/PACodec/main/img/mel_zoom_f0_comparison.png"
+          alt="Zoomed Mel+F0 comparison (Original, HiFi-GAN, AutoVocoder, Vocos, Proposed)"
+          width="100%">
+        <figcaption>
+          <strong>Figure 3.</strong>
+          <em>Zoomed-in Mel+F0 segment. The Proposed model maintains sharp, well-aligned harmonics,
+          while AutoVocoder produces smeared bands, HiFi-GAN shows smoother but drifting pitch,
+          and Vocos displays unstable harmonics.</em>
+        </figcaption>
+      </figure>
+    </td>
+
+    <!-- Figure 4 -->
+    <td valign="top" width="50%">
+      <figure>
+        <img
+          src="https://raw.githubusercontent.com/malradhi/PACodec/main/img/residual_mel_energy_over_time.png"
+          alt="Residual Mel Energy vs Original (per frame) over Time"
+          width="100%">
+        <figcaption>
+          <strong>Figure 4.</strong>
+          <em>Residual mel energy (L2 difference) over time compared to the original.
+          The Proposed model and HiFi-GAN maintain consistently low residuals, while
+          AutoVocoder exhibits large error spikes and Vocos shows higher variability.</em>
+        </figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <p align="left">
   <img width="40%" src="https://raw.githubusercontent.com/malradhi/MiSTR/main/img/compare.png" alt="Model Architecture" />
 </p>
+
+ -->
+
+
+
+
+
+
+
 
 
 
