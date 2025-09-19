@@ -1,0 +1,12 @@
+numpy
+scipy
+pandas
+matplotlib
+scikit-learn
+torch>=2.0
+transformers
+pywt
+pyworld
+pynwb
+h5py
+
