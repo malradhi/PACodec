@@ -16,8 +16,10 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 
 <div align="center">
   <a href="https://malradhi.github.io/PACodec/">
-    <img src="https://img.shields.io/badge/GitHub-Demo%20Page-orange.svg" alt="Demo" width="180">
+    <img src="https://img.shields.io/badge/Demo%20Page-orange.svg" alt="Demo" width="160">
   </a>
+</div>
+
 <!--   <img src="https://img.shields.io/badge/Python-3.10-brightgreen" alt="Python">
   <img src="https://img.shields.io/badge/License-MIT-blue" alt="License"> -->
 </div>
