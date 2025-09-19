@@ -15,11 +15,24 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 
 ## 🎧 Audio Samples
 
+<!-- <div align="center">
+  <a href="https://malradhi.github.io/PACodec/">
+    <img src="https://img.shields.io/badge/Demo%20Page-blueviolet.svg" alt="Demo" width="160">
+  </a>
+</div> -->
+
+
+
 <div align="center">
   <a href="https://malradhi.github.io/PACodec/">
-    <img src="https://img.shields.io/badge/Demo%20Page-informational.svg" alt="Demo" width="160">
+    <img src="https://img.shields.io/badge/🎧%20Demo%20Page-blueviolet.svg?style=for-the-badge" alt="Demo" />
   </a>
 </div>
+
+
+
+
+
 
 <!--   <img src="https://img.shields.io/badge/Python-3.10-brightgreen" alt="Python">
   <img src="https://img.shields.io/badge/License-MIT-blue" alt="License"> -->
