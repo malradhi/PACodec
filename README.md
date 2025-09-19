@@ -72,12 +72,12 @@ Riad Larbi,
 ### 1. Clone the Repository and Set Up the Environment
 
 ```bash
-git clone git clone https://github.com/malradhi/mistr.git
-cd mistr
+git clone git clone https://github.com/malradhi/pacodec.git
+cd pacodec
 
 # Recommended: Create a clean environment
-conda create -n mistr python=3.10
-conda activate mistr
+conda create -n pacodec python=3.10
+conda activate pacodec
 
 # Install required Python packages
 pip install -r requirements.txt
@@ -88,78 +88,72 @@ pip install -r requirements.txt
 
 <br>
 
-### 2. Feature Extraction from iEEG and Audio
+### 2. Prepare Dataset
 
-```bash
-python neural_signal_encoder.py
+PACodec expects a dataset of .wav files and training/validation split text files (training.txt, validation.txt).
+Each line in the text file should list the audio file basename and optional metadata.
 
-```
-
-This will generate the following files for each participant (e.g., `sub-XX`):
-
-- `*_feat.npy`: Wavelet + prosody features extracted from iEEG
-- `*_spec.npy`: Ground-truth Mel spectrogram from original audio
-- `*_prosody.npy`: Extracted prosody features (pitch, energy, shimmer, duration, phase variability)
+Update --input_wavs_dir, --input_training_file, and --input_validation_file in your config.
 
 <br>
 
-### 3. Train the Spectrogram Mapper (Autoencoder + Transformer)
+
+### 3. Feature Extraction (Complex Spectrum + F0)
+
+The dataset loader (ComplexDataset) automatically extracts:
+- Complex spectral components (magnitude, phase, power)
+- Fundamental frequency (F0) using librosa.pyin with caching
+- Ground-truth Mel spectrogram for loss computation
 
 ```bash
-python spectrogram_mapper_transformer.py
+python complexdataset.py
+
+```
+
+All features are aligned and cached for efficient training.
+
+<br>
+
+
+### 4. Train PACodec
+
+```bash
+python train.py --config config.json --checkpoint_path cp_pacodec
 
 ```
 
 This script will:
-
-- Train a **neural autoencoder** to compress iEEG features into a compact latent space
-- Use a **Transformer** to predict Mel spectrograms from the latent iEEG representations
-- Generate audio waveforms from predicted and ground-truth spectrograms
-- Save predicted spectrograms as `*_predicted_spec.npy`
-- Save synthesized audio files:
-  - `*_orig_synthesized.wav` — from original spectrogram
-  - `*_predicted.wav` — from predicted spectrogram
-- Save evaluation results in `temporal_attention_results.npy`
+- Initialize the Encoder (with F0-guided masking + residual attention)
+- Train the Generator to predict complex STFT components
+- Optimize with adversarial discriminators (Multi-Period & Multi-Scale)
+- Use combined mel loss, waveform loss, and feature matching loss
+- Save checkpoints (e_xxxxxx, g_xxxxxx, do_xxxxxx) and TensorBoard logs in cp_pacodec/
 
 
 <br>
 
-### 4. Phase-Aware Waveform Reconstruction (IHPR Vocoder)
+### 5. Inference (Waveform Reconstruction)
 
-```bash
-python harmonic_phase_reconstructor.py
-
-```
-
-This script applies **Iterative Harmonic Phase Reconstruction (IHPR)** to refine phase and improve audio quality.
-
-It will:
-
-- Load predicted spectrograms (`*_predicted_spec.npy`)
-- Apply harmonic-consistent phase reconstruction
-- Save high-fidelity audio waveforms for each participant:
-  - `*_predicted.wav` (updated)
-  - `*_orig_synthesized.wav` (if regenerated)
-- Output `.wav` files in the `/results/` directory
+Once trained, the Generator can directly reconstruct audio:
+- Loads encoded latent features
+- Predicts magnitude & phase
+- Uses inverse STFT (TorchSTFT.polar_inverse) for waveform synthesis
+Resulting .wav files are saved in the /results/ directory.
 
 
 <br>
 
-### 5. Visualization of Results
+### 6. Visualisation
 
 ```bash
-python neural_output_visualizer.py
-
+cp_pacodec/logs/
 ```
 
-This script generates high-resolution plots and visualizations:
+You can monitor them using TensorBoard:
 
-- `results.png`: Participant-wise correlation scores
-- `spec_example.png` and `.pdf`: Ground-truth vs. predicted spectrograms
-- `wav_example.png` and `.pdf`: Waveform comparison of original vs. reconstructed audio
-- `*_prosody_visualization.png`: Plots of extracted prosody features (if available)
-
-All visual outputs are saved in the `/results/` directory.
+```bash
+tensorboard --logdir cp_pacodec/logs
+```
 
 
 
@@ -169,13 +163,15 @@ All visual outputs are saved in the `/results/` directory.
 ## 📂 Directory Structure
 
 ```bash
-./features/            # Extracted features and prosody files
-./results/             # Output spectrograms, waveforms, and plots
-./harmonic_phase_reconstructor.py
-./neural_signal_encoder.py
-./spectrogram_mapper_transformer.py
-./neural_output_visualizer.py
+./complexdataset.py        # Data pipeline: audio, F0, complex spectrum
+./models.py                # Encoder, Generator, Discriminators
+./train.py                 # Training loop with losses & checkpointing
+./config.json              # Model and training hyperparameters
+./cp_pacodec/              # Saved checkpoints and logs
+./results/                 # Generated waveforms and spectrograms
 ```
+
+
 
 
 <br>
@@ -202,11 +198,11 @@ We’ve released our code under the MIT License to support open research. If you
 
 ```bibtex
 @inproceedings{alradhi2025mistr,
-  title     = {MiSTR: Multi-Modal iEEG-to-Speech Synthesis with Transformer-Based Prosody Prediction and Neural Phase Reconstruction},
+  title     = {Prosody-Guided Harmonic Attention for Phase-Coherent Neural Vocoding in the Complex Spectrum},
   author    = {Mohammed Salah Al-Radhi and G{\'e}za N{\'e}meth and Branislav Gerazov},
-  booktitle = {Proceedings of Interspeech 2025},
-  year      = {2025},
-  address   = {Rotterdam, The Netherlands}
+  booktitle = {Proceedings of ICASSP},
+  year      = {2026},
+  address   = {Barcelona, Spain}
 }
 ```
 
