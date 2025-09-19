@@ -4,7 +4,7 @@
 
 
   <head>
-    <title>MiSTR</title>
+    <title>PACodec</title>
       <article>
         <header>
 		
@@ -14,12 +14,12 @@
 <p><br> 
 </br></p>
 	
-	<h1>MiSTR: Multi-Modal iEEG-to-Speech Synthesis with Transformer-Based Prosody Prediction and Neural Phase Reconstruction</h1>
+	<h1>Prosody-Guided Harmonic Attention for Phase-Coherent Neural Vocoding in the Complex Spectrum</h1>
         </header>
       </article>
 	  <p>  </p>
 	  
-	  <p><b>Authors:</b> <a href="https://malradhi.github.io/" target="_blank">Mohammed Salah Al-Radhi</a>, Géza Németh, Branislav Gerazov</p>
+	  <p><b>Authors:</b> <a href="https://malradhi.github.io/" target="_blank">Mohammed Salah Al-Radhi</a>, Riad Larbi, Mátyás Bartalis</p>
 	  <p> 
 	  </p>  
 <p> 
@@ -31,7 +31,25 @@
 
 <p>
 <b>Abstract: </b>
-Speech synthesis from intracranial EEG (iEEG) signals offers a promising avenue for restoring communication in individuals with severe speech impairments. However, achieving intelligible and natural speech remains challenging due to limitations in feature representation, prosody modeling, and phase reconstruction. We introduce MiSTR, a deep-learning framework that integrates: 1) Wavelet-based feature extraction to capture fine-grained temporal, spectral, and neurophysiological representations of iEEG signals, 2) A Transformer-based decoder for prosody-aware spectrogram prediction, and 3) A neural phase vocoder enforcing harmonic consistency via adaptive spectral correction. Evaluated on a public iEEG dataset, MiSTR achieves state-of-the-art speech intelligibility, with a mean Pearson correlation of 0.91 between reconstructed and original Mel spectrograms, improving over existing neural speech synthesis baselines.
+Neural vocoders are central to speech synthesis; despite
+their success, most still suffer from limited prosody
+modeling and inaccurate phase reconstruction. We propose a
+vocoder that introduces prosody-guided harmonic attention
+to enhance voiced-segment encoding and directly predicts
+complex-spectral components for waveform synthesis via
+inverse STFT. Unlike mel-spectrogram–based approaches,
+our design jointly models magnitude and phase, ensuring
+phase coherence and improved pitch fidelity. To further
+align with perceptual quality, we adopt a multi-objective
+training strategy that integrates adversarial, spectral, and
+phase-aware losses. Experiments on benchmark datasets
+demonstrate consistent gains over HiFi-GAN and
+AutoVocoder: F0-RMSE reduced by 22%, voiced/unvoiced
+error lowered by 18%, and MOS scores improved by 0.15.
+These results show that prosody-guided attention combined
+with direct complex-spectrum modeling yields more natural,
+pitch-accurate, and robust synthetic speech, setting a strong
+foundation for expressive neural vocoding.
 </p>
 
 <!-- <p align="left"><img width="40%" src="../img/model.jpg" /></p> -->
