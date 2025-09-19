@@ -45,11 +45,9 @@ Riad Larbi,
 
 
 ## 📜 News
-🧠 [2025.08.08] We’ve officially released the full source code for MiSTR! You can now explore, reproduce, and build on our multi-modal brain-to-speech synthesis pipeline. Check the [`src`](./src) folder for details.
+🧠 [2025.09.18] We’ve officially submitted our paper to ICASSP 2026! 🎉
 
-🧠 [2025.5.29] We are releasing all the code to support research on accelerating MiSTR multi-modal models.
-
-🥳 [2025.05.19, 11:54 AM CET] Our paper has been accepted to [Interspeech 2025](https://www.interspeech2025.org/home). Looking forward to seeing you in Rotterdam, The Netherlands, at the conference!
+🧠 [2025.09.18] We’ve also released the full source code for our work — check the src folder for details.
 
 <br>
 <br> 
