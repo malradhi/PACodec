@@ -53,12 +53,14 @@ Riad Larbi,
 <br> 
 
 ## 💡 Highlights
-1. **Multi-Modal iEEG Feature Encoding**: MiSTR introduces a wavelet-based encoder combined with prosody-aware features (pitch, energy, shimmer, duration, phase variability) to model the neural dynamics of speech production.
-2. **Transformer-Based Prosody Decoder**: A novel Transformer architecture captures long-range dependencies in brain activity to predict expressive and fluent Mel spectrograms aligned with speech prosody.
-3. **Neural Phase Vocoder (IHPR)**: MiSTR proposes Iterative Harmonic Phase Reconstruction (IHPR), ensuring phase continuity and harmonic consistency for high-fidelity audio synthesis without vocoder artifacts.
-4. **State-of-the-Art Performance**: Achieves a Pearson correlation of 0.91, STOI of 0.73, and MOSA score of 3.38, outperforming all existing baselines in iEEG-to-speech synthesis.
-5. **Clinically Inspired Design**: Designed with speech neuroprosthetics in mind, MiSTR offers a scalable, robust pipeline for restoring natural speech in individuals with severe communication impairments.
-6. **Code and Samples Available**: Full implementation, pretrained models, and inference samples are provided in this GitHub repository to support reproducibility and further research.
+1. **Prosody-Guided Harmonic Attention**: Introduces an F0-driven attention mechanism that emphasises voiced regions and harmonic structures, reducing pitch drift and improving prosodic fidelity.
+2. **Direct Complex-Spectrum Prediction**: Unlike mel-spectrogram–based vocoders, the model directly predicts real and imaginary STFT components, ensuring phase-coherent waveform reconstruction.
+3. **Multi-Objective Perceptual Training**: Combines MR-STFT, adversarial, and novel phase-aware losses to jointly optimise spectral fidelity, phase continuity, and perceptual quality.
+4. **Robust Performance Gains**: Achieves a 22% reduction in F0 RMSE, 18% lower voiced/unvoiced error, and MOS improvement of +0.15 over HiFi-GAN and AutoVocoder baselines.
+5. **Natural and Expressive Speech**: Preserves sharper harmonics, temporal coherence, and pitch accuracy, resulting in more natural and robust synthetic speech.
+6. **Open Resources**: Full source code and demo samples are available in the GitHub repository to support reproducibility and future research.
+
+
 
 
 
