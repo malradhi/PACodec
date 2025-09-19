@@ -120,7 +120,7 @@ This script will:
 - Train the **Generator** to predict complex STFT components  
 - Optimize with adversarial discriminators (Multi-Period & Multi-Scale)  
 - Use combined **mel loss, waveform loss, and feature matching loss**  
-- Save checkpoints (`e_xxxxxx`, `g_xxxxxx`, `do_xxxxxx`) and TensorBoard logs in `cp_pacodec/`  
+- Save checkpoints (`e_xxxxxx`, `g_xxxxxx`, `do_xxxxxx`) and TensorBoard logs in [`cp_pacodec`](./cp_pacodec)  
 
 ---
 
