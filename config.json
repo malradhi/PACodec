@@ -1,0 +1,91 @@
+{
+  "experiment_name": "PACodec_ICASSP2026",
+  "data": {
+    "datasets": [
+      "LJSpeech-1.1",
+      "VCTK"
+    ],
+    "input_wavs_dir": "./data/wavs",
+    "input_training_file": "./data/train.txt",
+    "input_validation_file": "./data/valid.txt",
+    "sampling_rate": 22050,
+    "n_fft": 1024,
+    "hop_length": 256,
+    "win_length": 1024,
+    "stft_window": "hann",
+    "n_mels": 80,
+    "fmin": 0,
+    "fmax": 8000
+  },
+  "features": {
+    "use_f0": true,
+    "f0_method": "harvest",
+    "f0_cache_dir": "./features/f0",
+    "cache_dir": "./features",
+    "align_to_stft_hop": true
+  },
+  "model": {
+    "encoder_type": "conv_residual",
+    "harmonic_attention": true,
+    "f0_embedding_dim": 64,
+    "hidden_channels": 192,
+    "decoder_type": "upsample_conv",
+    "predict_complex_spectrum": true,
+    "output_components": "real_imag",
+    "istft_inference": true
+  },
+  "loss": {
+    "use_mr_stft": true,
+    "mr_stft": {
+      "fft_sizes": [
+        1024,
+        512,
+        2048
+      ],
+      "hop_sizes": [
+        256,
+        128,
+        512
+      ],
+      "win_lengths": [
+        1024,
+        512,
+        2048
+      ]
+    },
+    "use_adversarial": true,
+    "use_feature_matching": true,
+    "use_phase_aware": true,
+    "lambda_mr_stft": 1.0,
+    "lambda_adv": 1.0,
+    "lambda_fm": 2.0,
+    "lambda_phase": 1.0
+  },
+  "discriminators": {
+    "multi_period": true,
+    "multi_resolution": true
+  },
+  "training": {
+    "optimizer": "adamw",
+    "learning_rate": 0.0002,
+    "adam_b1": 0.8,
+    "adam_b2": 0.99,
+    "weight_decay": 0.01,
+    "batch_size": 16,
+    "num_epochs": 400,
+    "seed": 1234,
+    "checkpoint_path": "./cp_pacodec",
+    "resume": false,
+    "mixed_precision": true,
+    "single_gpu": true
+  },
+  "logging": {
+    "log_dir": "./cp_pacodec/logs",
+    "save_interval_steps": 5000,
+    "eval_interval_steps": 1000
+  },
+  "inference": {
+    "results_dir": "./results",
+    "use_polar_inverse": true
+  }
+}
