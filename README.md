@@ -154,12 +154,16 @@ tensorboard --logdir cp_pacodec/logs
 
 ## 📂 Directory Structure
 ```bash
-./complexdataset.py        # Data pipeline: audio, F0, complex spectrum
-./models.py                # Encoder, Generator, Discriminators
-./train.py                 # Training loop with losses & checkpointing
+./src/complexdataset.py    # Data pipeline: audio, F0, complex spectrum
+./src/models.py            # Encoder, Generator, Discriminators
+./src/train.py             # Training loop with losses & checkpointing
 ./config.json              # Model and training hyperparameters
+./requirements.txt         # Dependency specifications
 ./cp_pacodec/              # Saved checkpoints and logs
-./results/                 # Generated waveforms and spectrograms
+./results/                 # Generated audio waveforms, spectrograms, and evaluation visualizations
+./features/                # Cached features: spectral components, F0, spectrograms
+./img/                     # Images and figures for the demo / paper
+./samples/                 # Audio samples for listening (natural / models / proposed)
 ```
 
 <br>
