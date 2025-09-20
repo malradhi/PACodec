@@ -4,9 +4,14 @@ pandas
 matplotlib
 scikit-learn
 torch>=2.0
+torchaudio
 transformers
+librosa
 pywt
 pyworld
 pynwb
 h5py
+tensorboard
+soundfile
+tqdm
 
