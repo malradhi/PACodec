@@ -181,7 +181,7 @@ If you use it in your work, please consider citing us:
 @inproceedings{alradhi2025pacodec,
   title     = {Prosody-Guided Harmonic Attention for Phase-Coherent Neural Vocoding in the Complex Spectrum},
   author    = {Mohammed Salah Al-Radhi and Riad Larbi and M{'a}ty{'a}s Bartalis and G{'e}za N{'e}meth},
-  booktitle = {Proceedings of ICASSP},
+  booktitle = {Submitted to ICASSP},
   year      = {2026},
   address   = {Barcelona, Spain}
 }
