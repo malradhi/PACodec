@@ -77,6 +77,20 @@ Results and logs will be saved under [`results`](./results) and [`cp_pacodec/log
 <br>
 <br>
 
+
+## 📊 Datasets
+
+PACodec was trained and evaluated on the following publicly available datasets:
+
+- [**LJSpeech**](https://keithito.com/LJ-Speech-Dataset/) — 24 hours of single-speaker (female) English read speech, widely used in TTS and vocoder research.  
+- [**VCTK**](https://datashare.ed.ac.uk/handle/10283/3443) — Multi-speaker English speech corpus with 110 speakers (male and female) recorded under clean conditions.  
+
+> ⚠️ Note: Due to licensing restrictions, we cannot redistribute these datasets.  
+> Please download them directly from the original sources linked above.
+
+
+
+
 ## 🛠️ Usage
 
 ### 1. Clone the Repository and Set Up the Environment
