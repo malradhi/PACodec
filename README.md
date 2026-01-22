@@ -44,7 +44,7 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 ## 📜 News
 🧠 [2025.09.18] We’ve officially submitted our paper to **ICASSP 2026**! 🎉  
 🧠 [2025.09.18] We’ve also released the full source code for our work — check the [`src`](./src) folder for details.  
-🧠 [2026.09.17] Our paper was **accepted to ICASSP 2026** — excited to present in Barcelona 🎉  
+🧠 [2026.01.17] Our paper was **accepted to ICASSP 2026** — excited to present in Barcelona 🎉  
 
 <br>
 <br>
