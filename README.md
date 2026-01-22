@@ -44,6 +44,7 @@ Department of Telecommunications and Artificial Intelligence, Budapest Universit
 ## 📜 News
 🧠 [2025.09.18] We’ve officially submitted our paper to **ICASSP 2026**! 🎉  
 🧠 [2025.09.18] We’ve also released the full source code for our work — check the [`src`](./src) folder for details.  
+🧠 [2026.09.17] Our paper was **accepted to ICASSP 2026** — excited to present in Barcelona 🎉  
 
 <br>
 <br>
@@ -200,7 +201,7 @@ If you use it in your work, please consider citing us:
 @inproceedings{alradhi2025pacodec,
   title     = {Prosody-Guided Harmonic Attention for Phase-Coherent Neural Vocoding in the Complex Spectrum},
   author    = {Mohammed Salah Al-Radhi and Riad Larbi and M{'a}ty{'a}s Bartalis and G{'e}za N{'e}meth},
-  booktitle = {Submitted to ICASSP},
+  booktitle = {Accepted to ICASSP},
   year      = {2026},
   address   = {Barcelona, Spain}
 }
